@@ -1,16 +1,17 @@
-let boxes= document.createElement("square");
+
 for(let i=1;i<=100;i++){
-    let boxes= document.createElement("div");
-    boxes.classList.add("square");
-    document.querySelector("div.row").append(boxes);
+    const boxes= document.createElement("square");
+    boxes.classList.add("square","d-flex","justify-content-center","align-items-center");
     boxes.append(i);
-    boxes.classList.add("position-absolute","bottom-0","start-0")
-    if(i % 3 === 0){
+    document.querySelector(".row").append(boxes);
+    if(i % 15 === 0){
+        boxes.innerHTML="fizzbuzz";
+        boxes.style.background="#f0466f";
+    }else if(i % 3 === 0){
+        boxes.innerHTML="fizz";
         boxes.style.background="#0cd6a1";
-        if(i % 15 === 0){
-            boxes.style.background="#f0466f";
-        }
     }else if(i % 5 === 0){
+        boxes.innerHTML="buzz";
         boxes.style.background="#ffd166";
     }
     // document.querySelector(".container").append=boxes;

@@ -3,8 +3,8 @@
     padding: 0;
     margin: 0;
 }
-.container{
-    position: relative;
+body{
+    background-color: #083b4c;
 }
 .square{
     width: 100px;
